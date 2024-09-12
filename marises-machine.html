@@ -57,18 +57,16 @@
         
         var baseOrigem = input_baseOrigem.value
 
-        var numero = 0;
+        var numero = Number(demo1.value);
 
         if (baseOrigem == 'binario') {
-                var numero = Number(demo1.value);
                 numero = parseInt(numero, 2);
         };
         if (baseOrigem == 'hexadecimal') {
-                var numero = demo1.value;
+                numero = demo1.value;
                 numero = parseInt(numero, 16);
         };
         if (baseOrigem == 'octal') {
-                var numero = Number(demo1.value);
                 numero = parseInt(numero, 8) ;
         }
 
