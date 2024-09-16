@@ -3,7 +3,7 @@
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fabiam</title>
 </head>
 
 <body bgcolor="#00ffff">
@@ -13,8 +13,16 @@
 
         <br><br>
 
-        <h3>Escolha base</h3>
-        <input type="text" id="input_baseOrigem">
+        
+        <label><h3>Escolha base</h3>
+            <input id="input_baseOrigem" list="baseUser">
+                <datalist id="baseUser">
+                    <option value="decimal"></option>
+                    <option value="binario"></option>
+                    <option value="octal"></option>
+                    <option value="hexadecimal"></option>  
+                </datalist>
+        </label>
 
         <h3>Inserir valor</h3>
         <input id="demo1" type="text" placeholder="Digite o valor em decimal">
@@ -69,6 +77,7 @@
         if (baseOrigem == 'octal') {
                 numero = parseInt(numero, 8) ;
         }
+
 
         let decimal = numero;
         let octal = numero.toString(8);
