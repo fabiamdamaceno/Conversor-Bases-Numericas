@@ -6,27 +6,85 @@
     <title>New Marise's Machine</title>
     <style>
         body {
-            background-color: gray;
+            background-image: url(https://i.pinimg.com/originals/f1/57/c4/f157c4d5789adbb9e571759bfa06c7cc.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
         }
-        #calculadora {
+
+        header {
+            height: 150px;
+            width: max-content;
+            
+        }
+
+        .cent {
         display: flex;
+        flex-direction: column;
         justify-items: center;
         justify-content: center;
-        
+        align-items: center;
         
         }
         .ipt {
-            background-color: rgb(217, 217, 218);
+            border-radius: 10px;
+            border-color: #ececec;
+            background-color: #ecececc5;
+        }
+
+
+        #calculadora {
+            background-color:#013461a8;
+            width: 600px;
+            height: 600px;
+            margin-top: auto;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: auto;
+            border-style: groove;
+            border-color: #173042d5;
+            border-radius: 10px;
+            
+        }
+
+        #titulo {
+           font-family: 'Times New Roman', Times, serif; 
+           height: 150px;
+
+        }
+
+        #theBotao {
+            width: 110px;
+            height: 50px;
+            border-radius: 10px;
+            
+        }
+        #texto1 {
+            display: flex;
+            justify-items: center;            
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+            width: 202px;
+            height: 18px;
+            
         }
     </style>
     
 </head>
     <body>
+        <header>
 
-         <div id="calculdora">
-            <h2>Convert Machine</h2> 
-             <label>Número decimal<input class="ipt" id="iptNum" type="number"></label> <br>
-            
+        </header>
+        <div id="calculadora" class="cent">
+        <div id="titulo" >
+            <h2>CONVERT MACHINE</h2> 
+        </div>
+        <br>
+        <div class="">
+            <label>
+                <span id="texto1">Selecione um Número</span> 
+                <input class="ipt" id="iptNum" type="number">
+            </label> 
+            <br>
              <label>Selecione a base desse número
                  <input class="ipt" id="iptbaseUser" list="baseUser">
                      <datalist id="baseUser">
@@ -36,20 +94,33 @@
                          <option value="hexadecimal"></option>  
                      </datalist>
              </label>
-                <br><br>
-                <label>Selecione a base para converter
-                    <input class="ipt" id="iptBaseConv" list="base">
-                        <datalist id="base">
-                            <option value="decimal"></option>
-                            <option value="binario"></option>
-                            <option value="octal"></option>
-                            <option value="hexadecimal"></option>  
-                        </datalist>
-                </label>
-                
-                <button  id="teste" onclick="converter()">Converter</button>
-                <div id="divResposta"></div>
-        </div>        
+        </div>
+        <br>
+        <br>
+        
+            
+        <div class="cent">
+             <label>Selecione a base para converter
+                 <input class="ipt" id="iptBaseConv" list="base">
+                     <datalist id="base">
+                         <option value="decimal"></option>
+                         <option value="binario"></option>
+                         <option value="octal"></option>
+                         <option value="hexadecimal"></option>  
+                     </datalist>
+             </label>
+        </div>
+        
+        <br>
+        <br>
+         
+        <div class="cent">
+
+                <button  id="theBotao" onclick="converter()">CONVERTER</button>      
+        </div>    
+        
+        <div id="divResposta"></div>
+    </div>
     </body>
 </html>
 
