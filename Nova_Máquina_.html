@@ -52,6 +52,7 @@
         #titulo {
            font-family: 'Times New Roman', Times, serif; 
            height: 150px;
+           color: white;
 
         }
 
@@ -66,10 +67,29 @@
             justify-items: center;            
             font-family: 'Times New Roman', Times, serif;
             font-size: large;
-            width: 202px;
+            width: 230px;
             height: 18px;
-            
+            color: white;
         }
+        #texto2 {
+            display: flex;
+            justify-items: center;            
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+            width: 230px;
+            height: 18px;
+            color: white;
+        }
+        #texto3 {
+            display: flex;
+            justify-items: center;            
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+            width: 230px;
+            height: 18px;
+            color: white;
+        }
+
     </style>
     
 </head>
@@ -79,17 +99,22 @@
         </header>
         <div id="calculadora" class="cent">
         <div id="titulo" >
-            <h2>CONVERT MACHINE</h2> 
+            <h2>CONVERTER MACHINE</h2> 
         </div>
         <br>
         <div class="">
             <label>
-                <span id="texto1">Selecione um Número</span> 
+                <span id="texto1">Selecione um Número</span>
                 <input class="ipt" id="iptNum" type="number">
             </label> 
-            <br>
-             <label>Selecione a base desse número
-                 <input class="ipt" id="iptbaseUser" list="baseUser">
+
+<br>
+<br>
+<br>
+<br>
+
+            <label> <span id="texto2">Selecione a base desse número</span>
+            <input class="ipt" id="iptbaseUser" list="baseUser">
                      <datalist id="baseUser">
                          <option value="decimal"></option>
                          <option value="binario"></option>
@@ -98,12 +123,13 @@
                      </datalist>
              </label>
         </div>
-        <br>
-        <br>
-        
+
+<br>
+<br>
+<br>
             
         <div class="cent">
-             <label>Selecione a base para converter
+             <label> <span id="texto3">Selecione a base para converter </span>
                  <input class="ipt" id="iptBaseConv" list="base">
                      <datalist id="base">
                          <option value="decimal"></option>
@@ -114,8 +140,9 @@
              </label>
         </div>
         
-        <br>
-        <br>
+<br>
+<br>
+<br>
          
         <div class="cent">
 
