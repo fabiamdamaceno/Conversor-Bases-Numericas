@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,17 +15,18 @@
         header {
             height: 150px;
             width: max-content;
-            
+
         }
 
         .cent {
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
-        justify-content: center;
-        align-items: center;
-        
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            justify-content: center;
+            align-items: center;
+
         }
+
         .ipt {
             border-radius: 10px;
             border-color: #ececec;
@@ -32,7 +34,7 @@
         }
 
         #calculadora {
-            background-color:#013461a8;
+            background-color: #013461a8;
             width: 600px;
             height: 600px;
             margin-top: auto;
@@ -42,14 +44,15 @@
             border-style: groove;
             border-color: #173042d5;
             border-radius: 10px;
-            
+
         }
 
         #titulo {
-           font-family: 'Times New Roman', Times, serif; 
-           height: 150px;
-           color: #98ddff;
-           text-shadow: 2px 2px 0px #083040;;
+            font-family: 'Times New Roman', Times, serif;
+            height: 150px;
+            color: #98ddff;
+            text-shadow: 2px 2px 0px #083040;
+            ;
 
         }
 
@@ -63,9 +66,10 @@
             background-color: #0E3D59;
             color: #98ddff;
             text-shadow: 2px 2px 0px #083040;
-            
+
         }
-        #texto1 {         
+
+        #texto1 {
             font-family: 'Times New Roman', Times, serif;
             font-size: large;
             width: 230px;
@@ -73,7 +77,8 @@
             color: #98ddff;
             text-shadow: 2px 2px 0px #083040;
         }
-        #texto2 {         
+
+        #texto2 {
             font-family: 'Times New Roman', Times, serif;
             font-size: large;
             width: 230px;
@@ -81,7 +86,8 @@
             color: #98ddff;
             text-shadow: 2px 2px 0px #083040;
         }
-        #texto3 {       
+
+        #texto3 {
             font-family: 'Times New Roman', Times, serif;
             font-size: large;
             width: 230px;
@@ -89,89 +95,91 @@
             color: #98ddff;
             text-shadow: 2px 2px 0px #083040;
         }
+
         select {
             width: 177px;
             height: 21px;
-            
+
         }
-
-
     </style>
-    
+
 </head>
-    <body>
-        <header>
 
-        </header>
-        <center>
+<body>
+    <header>
+
+    </header>
+    <center>
         <div id="calculadora" class="cent">
-        <div id="titulo" >
-            <h2>CONVERTER MACHINE</h2> 
-        </div>
-        <br>
-        <div>
-            <label>
-                <span id="texto1">Selecione um Número</span>
-                <input class="ipt" id="iptNum" type="number">
-            </label> 
-        </div>    
-<br>
-<br>
-<br>
-        <div>
-            <label> <span id="texto2">Selecione a base desse número</span>
-            <select class="ipt" id="iptbaseUser">
-                         <option value="decimal">Decimal</option>
-                         <option value="binario">Binário</option>
-                         <option value="octal">Octal</option>
-                         <option value="hexadecimal">Hexadecimal</option>                      
-            </select>
-             </label>
-        </div>
+            <div id="titulo">
+                <h2>CONVERTER MACHINE</h2>
+            </div>
+            <br>
+            <div>
+                <label>
+                    <span id="texto1">Selecione um Número</span>
+                    <input class="ipt" id="iptNum" type="text">
+                </label>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div>
+                <label> <span id="texto2">Selecione a base desse número</span>
+                    <select class="ipt" id="iptbaseUser">
+                        <option value="decimal">Decimal</option>
+                        <option value="binario">Binário</option>
+                        <option value="octal">Octal</option>
+                        <option value="hexadecimal">Hexadecimal</option>
+                    </select>
+                </label>
+            </div>
 
-<br>
-<br>
-<br>
-            
-        <div class="cent">
-             <label> <span id="texto3">Selecione a base para converter </span>
-                <select class="ipt" id="iptBaseConv">
-                    <option value="decimal">Decimal</option>
-                    <option value="binario">Binário</option>
-                    <option value="octal">Octal</option>
-                    <option value="hexadecimal">Hexadecimal</option>                      
-       </select>
-             </label>
-        </div>
-        
-<br>
-<br>
-<br>
-         
-        <div class="cent">
+            <br>
+            <br>
+            <br>
 
-                <button  id="theBotao" onclick="converter()">CONVERTER</button>      
-        </div>    
-        
-        <div id="divResposta"></div>
-    </div>
-</center>
-    </body>
+            <div class="cent">
+                <label> <span id="texto3">Selecione a base para converter </span>
+                    <select class="ipt" id="iptBaseConv">
+                        <option value="decimal">Decimal</option>
+                        <option value="binario">Binário</option>
+                        <option value="octal">Octal</option>
+                        <option value="hexadecimal">Hexadecimal</option>
+                    </select>
+                </label>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <div class="cent">
+
+                <button id="theBotao" onclick="converter()">CONVERTER</button>
+            </div>
+
+            <div id="divResposta"></div>
+        </div>
+    </center>
+</body>
+
 </html>
 
 <script>
-    
-    function converter(){
-       
+
+    function converter() {
+
         var numUser = Number(iptNum.value);
         var baseUser = iptbaseUser.value;
         var baseConverte = iptBaseConv.value;
         var decimal = '';
         var resposta = ``;
-        
+
         // style da resposta
-        var quadro = `style="display: block;
-            width: 300px;
+        var quadroResposta = `
+            style="display: block;
+            width: 320px;
             height: 80px; 
             background-color: #98ddffc0;
             font-weight: 500; 
@@ -181,9 +189,22 @@
             border-color: #173042d5;
             font-size: 30px;
             font-family: 'Times New Roman', Times, serif;"`;
-       
+
+        var quadroErro = `
+            style="display: block;
+            width: 320px;
+            height: 90px; 
+            background-color: #98ddffc0;
+            font-weight: 500; 
+            justify-content: center;
+            border-radius: 10px;            
+            border-style: groove;
+            border-color: #173042d5;
+            font-size: 18px;
+            font-family: 'Times New Roman', Times, serif;"`;
+
         // converter os números para decimal, o novo caminho da luz.
-        
+
         if (baseUser == 'decimal') {
             decimal = parseInt(numUser, 10);
         } else if (baseUser == 'binario') {
@@ -191,27 +212,67 @@
         } else if (baseUser == 'octal') {
             decimal = parseInt(numUser, 8);
         } else if (baseUser == 'hexadecimal') {
+            numUser = iptNum.value;
             decimal = parseInt(numUser, 16);
         }
-        
-        // converter para a base escolhida 
-        if (baseConverte == 'decimal') {
-           decimal = decimal;
-           resposta = `<br><span ${quadro}>${decimal}</span>`;
-        } else if (baseConverte == 'binario') {
-            var binario = decimal.toString(2)
-            resposta = `<br><span ${quadro}>${binario}</span>`;
-        } else if (baseConverte == 'octal') {
-            var octal = decimal.toString(8);
-            resposta = `<br><span ${quadro}>${octal}</span>`;
-        } else if (baseConverte == 'hexadecimal') {
-            var hexadecimal = decimal.toString(16);
-            resposta = `<br><span ${quadro}>${hexadecimal}</span>`;
+
+
+        // validação do número inserido
+        if (isNaN(decimal)) {
+            if (baseUser == 'decimal') {
+                resposta = `
+                    <br><p ${quadroErro}>
+                    <span style="color:red">Número ou base inválida! </span> <br>
+                    Para decimal, os algorismos válidos são: <br>
+                    0, 1, 2, 3, 4, 5, 6, 7, 8 e 9.</p>
+                    `
+            }
+            if (baseUser == 'binario') {
+                resposta = `
+                    <br><p ${quadroErro}>
+                    <span style="color:red">Número ou base inválida! </span> <br>
+                    Para binário, os algorismos válidos são:
+                    0 e 1.</p>
+                    `
+            }
+            if (baseUser == 'octal') {
+                resposta = `
+                    <br><p ${quadroErro}>
+                    <span style="color:red">Número ou base inválida! </span> <br>
+                    Para octal, os algorismos válidos são: <br> 
+                    0, 1, 2, 3, 4, 5, 6 e 7.</p>
+                    `
+            }
+            if (baseUser == 'hexadecimal') {
+                resposta = `
+                    <br><p ${quadroErro}>
+                    <span style="color:red">Número ou base inválida! </span> <br>
+                    Para hexadecimal, os algorismos válidos são <br>
+                    0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E e F.</p>
+                    `
+            }
+
+        } else {
+            // converter para a base escolhida 
+
+            if (baseConverte == 'decimal') {
+                decimal = decimal;
+                resposta = `<br><span ${quadroResposta}>${decimal}</span>`;
+            } else if (baseConverte == 'binario') {
+                var binario = decimal.toString(2)
+                resposta = `<br><span ${quadroResposta}>${binario}</span>`;
+
+            } else if (baseConverte == 'octal') {
+                var octal = decimal.toString(8);
+                resposta = `<br><span ${quadroResposta}>${octal}</span>`;
+            } else if (baseConverte == 'hexadecimal') {
+                var hexadecimal = decimal.toString(16);
+                resposta = `<br><span ${quadroResposta}>${hexadecimal}</span>`;
+            }
         }
-        
-        
-        
+
+
         divResposta.innerHTML = resposta;
-       
+
     }
 </script>
